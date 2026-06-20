@@ -1,0 +1,62 @@
+---
+interface Props {
+  color?: string;
+  opacity?: number;
+  size?: number;
+  class?: string;
+}
+
+const {
+  color = '#2D5BFF',
+  opacity = 0.18,
+  size = 200,
+  class: className = '',
+} = Astro.props;
+---
+
+<svg
+  viewBox="0 0 200 200"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  class={className}
+  style={`width: ${size}px; height: ${size}px;`}
+>
+  <!-- Signal wave arcs radiating from center-left, like the logo waves -->
+  <circle cx="72" cy="100" r="18" stroke={color} stroke-width="2.5" stroke-linecap="round" opacity={opacity + 0.12} />
+  <path
+    d="M 90 78 A 30 30 0 0 1 90 122"
+    stroke={color}
+    stroke-width="2.5"
+    stroke-linecap="round"
+    opacity={opacity + 0.08}
+  />
+  <path
+    d="M 102 66 A 44 44 0 0 1 102 134"
+    stroke={color}
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity={opacity + 0.04}
+  />
+  <path
+    d="M 114 54 A 58 58 0 0 1 114 146"
+    stroke={color}
+    stroke-width="1.8"
+    stroke-linecap="round"
+    opacity={opacity}
+  />
+  <path
+    d="M 126 42 A 72 72 0 0 1 126 158"
+    stroke={color}
+    stroke-width="1.5"
+    stroke-linecap="round"
+    opacity={opacity - 0.04}
+  />
+  <path
+    d="M 138 30 A 86 86 0 0 1 138 170"
+    stroke={color}
+    stroke-width="1.2"
+    stroke-linecap="round"
+    opacity={opacity - 0.08}
+  />
+</svg>

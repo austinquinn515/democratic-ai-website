@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+---
+
+<Layout
+  title="Contact and Book"
+  description="Book a 30-minute Leverage Audit call with Austin Quinn at Democratic AI Consulting. No pitch. Just a clear look at where AI can help your practice."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(600px 400px at 80% 20%, rgba(255,107,87,0.28), transparent 60%), radial-gradient(500px 400px at 10% 70%, rgba(45,91,255,0.22), transparent 55%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">Contact</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        Let's have a real conversation
+      </h1>
+      <p class="text-[17px] text-[#c4cede] leading-body max-w-lg mx-auto">
+        The first call is 30 minutes. You talk. I listen. We figure out whether this is the right fit and where to start.
+      </p>
+    </div>
+  </section>
+
+  <!-- Booking embed + info -->
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16 items-start">
+        <!-- Left column: context -->
+        <div data-reveal>
+          <h2 class="text-[22px] font-bold tracking-tight text-ink mb-5">What to expect</h2>
+          <div class="space-y-4 text-[15px] text-mute leading-body mb-8">
+            <p>Democratic AI Consulting is not the right fit for everyone. The clients it serves best are professionals who take the question of how they use AI as seriously as whether they use it.</p>
+            <p>The first conversation is straightforward: what your practice looks like right now, where you think AI could help, and what you are most concerned about getting wrong. From there, the right engagement type becomes fairly obvious.</p>
+          </div>
+
+          <div class="bg-paper rounded-xl p-5 mb-8">
+            <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-3">On the call</p>
+            <ul class="space-y-2">
+              {[
+                "Overview of your practice and current workflow",
+                "Where you think AI could create leverage",
+                "What you are most concerned about getting wrong",
+                "Whether the Leverage Audit is the right starting point",
+              ].map((item) => (
+                <li class="flex items-start gap-2 text-[13.5px] text-ink">
+                  <span class="text-coral mt-0.5" aria-hidden="true">&rsaquo;</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="text-[13px] text-mute leading-relaxed">
+            <p class="font-semibold text-ink mb-1">Austin Quinn</p>
+            <p>Democratic AI Consulting</p>
+            <p>New York, NY</p>
+          </div>
+        </div>
+
+        <!-- Right column: Cal.com embed placeholder -->
+        <div data-reveal>
+          <div class="bg-paper rounded-2xl p-6 min-h-[500px] flex flex-col items-center justify-center text-center border border-dashed border-[#c8d0dc]">
+            <!-- Cal.com embed goes here. Replace the div below with the Cal.com inline embed script. -->
+            <div class="mb-5">
+              <div class="w-14 h-14 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="5" width="20" height="18" rx="3" stroke="#FF6B57" stroke-width="2"/>
+                  <path d="M3 10H23" stroke="#FF6B57" stroke-width="2"/>
+                  <path d="M8 3V7M18 3V7" stroke="#FF6B57" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 15H13M8 19H11" stroke="#FF6B57" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3 class="text-[17px] font-semibold text-ink mb-2">Book a Leverage Audit</h3>
+              <p class="text-[14px] text-mute max-w-xs mx-auto leading-relaxed">30-minute call, no pitch. Pick a time that works and you will receive a confirmation with everything you need.</p>
+            </div>
+
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener"
+              class="bg-coral text-white rounded-full px-8 py-3.5 text-[15px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150 shadow-[0_6px_20px_rgba(255,107,87,0.30)]"
+            >
+              Open booking calendar
+            </a>
+
+            <p class="mt-5 text-[12px] text-[#9ba6b5]">
+              Powered by Cal.com. Once you set up your account, you can embed the calendar directly on this page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Not sure section -->
+  <section class="bg-paper py-20 px-6">
+    <div class="max-w-2xl mx-auto" data-reveal>
+      <h2 class="text-[24px] font-bold tracking-tight text-ink mb-4">Not sure if this is the right fit?</h2>
+      <p class="text-[16px] text-mute leading-body mb-6">
+        Start with the Leverage Audit. It is designed to give you a clear picture without requiring you to commit to a larger engagement first. If it turns out AI infrastructure is not the right priority for your practice right now, you will leave with a better understanding of why, and a roadmap for when it is.
+      </p>
+      <a
+        href="/services"
+        class="text-[15px] font-semibold text-brand-blue hover:text-ink transition-colors duration-150"
+      >
+        See all services and pricing &rarr;
+      </a>
+    </div>
+  </section>
+</Layout>

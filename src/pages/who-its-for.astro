@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+
+const verticals = [
+  {
+    name: "Law Practices",
+    challenge: "Attorneys and small law practices spend a significant portion of billable time on work that is genuinely repetitive: drafting routine correspondence, organizing research, updating clients on case status. The hesitation about AI is real and rational. A communication that feels impersonal or off-brand can damage relationships that took years to build.",
+    opportunity: "AI built carefully for a law practice automates the routine without touching what clients actually hired you for. Client updates that match your firm's voice. Research summaries that compress prep time without sacrificing depth. Intake workflows that are thorough and human-feeling. The goal is leverage, not shortcuts.",
+    signal: "You are turning away work because you cannot handle more volume at the quality standard you hold yourself to.",
+  },
+  {
+    name: "Accountants and Bookkeepers",
+    challenge: "Tax season is the obvious pressure point, but the real constraint is the advisory relationship. Clients do not hire accountants for compliance. They hire them for judgment. The problem is that too much of the available time goes to compliance work, leaving less for the strategic conversations that actually differentiate a practice.",
+    opportunity: "Automated client follow-up, onboarding questionnaires that gather the right information upfront, and report preparation workflows that handle the formatting so the accountant can focus on the analysis. The advisory relationship stays human. The surrounding infrastructure becomes faster and more reliable.",
+    signal: "You are spending time on client communication and administrative work that has a right answer and a wrong answer, but no judgment required.",
+  },
+  {
+    name: "Agencies",
+    challenge: "Creative and marketing agencies face a genuine paradox. The pressure to produce more content at lower cost runs directly against the brand value proposition: that great creative work requires human judgment and taste. Agencies that lean too hard into AI output risk producing work that looks like everything else.",
+    opportunity: "The leverage in agency operations is not in the creative itself but in the surrounding infrastructure: client briefing processes, reporting and analytics synthesis, internal knowledge management, proposal writing, and account management communications. Automating the scaffolding frees the creative team to spend its hours on actual creative work.",
+    signal: "Your team's best work is getting crowded out by work that is necessary but not where their judgment actually matters.",
+  },
+  {
+    name: "Clinics and Practices",
+    challenge: "Healthcare-adjacent practices, from physical therapy clinics to concierge medicine to specialized care practices, face a dual burden: the clinical work demands full presence, and the administrative overhead has grown enough to crowd it out. Staff time on scheduling, follow-up, and intake has real opportunity cost.",
+    opportunity: "Patient communication workflows, automated appointment preparation and follow-up, intake processes that gather relevant information before the appointment, and administrative documentation that happens around the clinical work rather than consuming time within it. The patient experience stays personal. The operational load becomes manageable.",
+    signal: "Clinical staff are spending meaningful time on administrative work that does not require clinical judgment.",
+  },
+  {
+    name: "Consultants",
+    challenge: "Independent consultants and small consulting practices have a visibility and capacity problem. The work that creates new clients, thought leadership, speaking, articles, and proposals, competes directly with the work that serves existing clients. There is rarely enough time to do both well.",
+    opportunity: "A content production system that makes consistent thought leadership achievable without consuming the hours that should be going to client work. Proposal frameworks built around your methodology that cut drafting time significantly. Research and synthesis workflows that let you stay current on what your clients need to know without reading everything yourself.",
+    signal: "You are doing less business development than you know you should be because client delivery leaves no time for it.",
+  },
+  {
+    name: "Coaches",
+    challenge: "Coaching practices are built on the coach's specific approach, methodology, and voice. The problem is that the business infrastructure surrounding the coaching work, onboarding, client follow-up, content, program materials, often runs on improvisation and manual labor that does not scale.",
+    opportunity: "Client onboarding that reflects your methodology and prepares clients well for the work ahead. Program materials and frameworks that are consistent and well-documented. A content production system that extends your voice and thinking to an audience beyond your current client roster. The coaching relationship stays irreplaceable. The business infrastructure becomes professional.",
+    signal: "You are manually rebuilding the same processes for each new client because you have not had time to systemize them.",
+  },
+  {
+    name: "Creators",
+    challenge: "Professional content creators face a version of the agency paradox at the individual level. The pressure to produce consistently runs against the fact that good work requires genuine thinking time. AI content tools promise volume and deliver homogenized output that does not sound like the person whose name is on it.",
+    opportunity: "A voice infrastructure that captures how you actually think and write, so AI-assisted drafts require editing rather than complete rewrites. Production workflows that handle the structural and formatting work so you can focus on the ideas. Distribution and repurposing systems that turn one piece of original thinking into multiple formats without creating multiple pieces of original work.",
+    signal: "You are producing less content than your audience wants because creating it takes more time than you can reliably allocate.",
+  },
+];
+---
+
+<Layout
+  title="Who It's For"
+  description="Democratic AI Consulting serves attorneys, accountants, agencies, clinics, consultants, coaches, and creators — professionals whose competitive advantage lives in the quality of their thinking, relationships, or voice."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(700px 400px at 85% 25%, rgba(45,91,255,0.35), transparent 60%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">Who we serve</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        Built for professionals like you
+      </h1>
+      <p class="text-[17px] text-[#c4cede] leading-body max-w-xl mx-auto">
+        This practice serves professionals and small firms whose competitive advantage lives inside the quality of their thinking, their relationships, or their voice.
+      </p>
+    </div>
+  </section>
+
+  <!-- Fit check -->
+  <section class="bg-white py-16 px-6 border-b border-paper">
+    <div class="max-w-2xl mx-auto text-center" data-reveal>
+      <p class="text-[16px] text-mute leading-body">
+        The clients this practice serves best have looked at generic AI output and thought: <span class="text-ink font-medium italic">that is not good enough to represent me.</span> They understand that implementation is a strategic decision, not a productivity play. If that description fits, read on.
+      </p>
+    </div>
+  </section>
+
+  <!-- Vertical breakdowns -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-4xl mx-auto space-y-0">
+      {verticals.map((v, i) => (
+        <div class={`py-16 border-t border-paper ${i === 0 ? 'border-t-0 pt-0' : ''}`} data-reveal>
+          <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
+            <div>
+              <h2 class="text-[22px] font-bold tracking-tight text-ink mb-2">{v.name}</h2>
+              <div class="w-8 h-0.5 bg-coral mt-3"></div>
+            </div>
+            <div class="space-y-5">
+              <div>
+                <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-2">The challenge</p>
+                <p class="text-[15.5px] text-mute leading-body">{v.challenge}</p>
+              </div>
+              <div>
+                <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-2">The opportunity</p>
+                <p class="text-[15.5px] text-ink leading-body">{v.opportunity}</p>
+              </div>
+              <div class="bg-paper rounded-xl p-4 flex gap-3">
+                <span class="text-coral font-bold text-[13px] shrink-0 mt-0.5">Signal</span>
+                <p class="text-[13.5px] text-mute italic leading-[1.6]">{v.signal}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="relative py-24 px-6 overflow-hidden"
+    style="background: #0E1726;"
+  >
+    <div class="max-w-xl mx-auto text-center" data-reveal>
+      <h2 class="text-[32px] sm:text-[40px] font-bold tracking-tightest text-white mb-5">
+        Recognize yourself?
+      </h2>
+      <p class="text-[17px] text-[#c4cede] leading-body mb-8">
+        The Leverage Audit is the right starting point. A 30-minute call, followed by two weeks of diagnostic work that gives you a clear picture of what is possible for your specific practice.
+      </p>
+      <a
+        href={CAL_LINK}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 bg-coral text-white rounded-full px-9 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150"
+      >
+        Book a Leverage Audit
+      </a>
+    </div>
+  </section>
+</Layout>

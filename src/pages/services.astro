@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignalWave from '../components/SignalWave.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+
+const tiers = [
+  {
+    name: "AI Leverage Audit",
+    price: "From $1,500",
+    duration: "Two weeks",
+    tag: "Start here",
+    tagColor: "coral",
+    desc: "A diagnostic engagement that gives you a clear picture of where AI can genuinely help your practice before you commit to building anything.",
+    includes: [
+      "Current workflow review and mapping",
+      "Identification of three to five highest-leverage AI opportunities",
+      "Plain-language analysis of relevant tools and their real trade-offs",
+      "Written priority roadmap with rationale for each recommendation",
+      "A 60-minute debrief call to walk through findings and answer questions",
+    ],
+    note: "The Audit stands alone. You are not obligated to continue to an implementation engagement. The roadmap is yours to keep.",
+  },
+  {
+    name: "Implementation Sprint",
+    price: "$2,500 to $5,000",
+    duration: "Four to six weeks",
+    tag: "Most requested",
+    tagColor: "blue",
+    desc: "The core engagement. We take what the Audit revealed and build the systems that will actually serve your practice, built from scratch around your specific workflow, voice, and clients.",
+    includes: [
+      "Full AI system build based on your practice's specific needs",
+      "Voice documentation and prompt architecture tuned to your communication style",
+      "Client communication templates and workflows, built and tested",
+      "Practical documentation so you can operate the systems independently",
+      "Two rounds of refinement after delivery",
+      "30-day check-in after handoff",
+    ],
+    note: "The scope within the price range reflects the complexity of the build. A solopreneur's content system sits at the lower end. A multi-person practice with complex client communications sits higher.",
+  },
+  {
+    name: "Operations Retainer",
+    price: "$1,000 to $1,500 / mo",
+    duration: "Month-to-month",
+    tag: "For ongoing clients",
+    tagColor: "mute",
+    desc: "For clients who have completed an implementation and want continued access to current judgment as their practice evolves and new AI tools enter the market.",
+    includes: [
+      "Four to six hours of monthly support and refinement",
+      "Quarterly system review and voice documentation update",
+      "Evaluation of new tools as they emerge and are relevant to your practice",
+      "Adjustments to existing systems as your workflow changes",
+      "Direct access for questions and strategic input",
+    ],
+    note: "Retainer availability is limited to active implementation clients and their referrals.",
+  },
+];
+---
+
+<Layout
+  title="Services and Pricing"
+  description="Clear pricing for AI consulting engagements: Leverage Audit from $1,500, Implementation Sprint $2,500 to $5,000, and Operations Retainer from $1,000/mo."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(600px 400px at 80% 20%, rgba(255,107,87,0.30), transparent 60%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">Services and pricing</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        Clear pricing, no surprises
+      </h1>
+      <p class="text-[17px] text-[#c4cede] leading-body">
+        Every engagement is founder-led. No junior consultants, no templates. Every price point works directly with Austin.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service tiers -->
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-4xl mx-auto space-y-16">
+      {tiers.map((tier, i) => (
+        <div class="border-t border-paper pt-16 first:border-t-0 first:pt-0" data-reveal>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
+            <!-- Left: name + price -->
+            <div>
+              <span class={`inline-block text-[11px] font-semibold tracking-[0.08em] uppercase px-3 py-1 rounded-full mb-4 ${
+                tier.tagColor === 'coral' ? 'bg-coral/10 text-coral' :
+                tier.tagColor === 'blue' ? 'bg-brand-blue/10 text-brand-blue' :
+                'bg-paper text-mute'
+              }`}>
+                {tier.tag}
+              </span>
+              <h2 class="text-[26px] font-bold tracking-tight text-ink mb-2">{tier.name}</h2>
+              <p class="text-[28px] font-bold text-coral mb-1">{tier.price}</p>
+              <p class="text-[13px] text-mute">{tier.duration}</p>
+              <div class="mt-6">
+                <a
+                  href={CAL_LINK}
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center gap-1.5 bg-ink text-white rounded-full px-6 py-3 text-[14px] font-semibold hover:bg-[#1a2740] active:scale-95 transition-all duration-150"
+                >
+                  Get started <span class="text-coral">&rsaquo;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: details -->
+            <div>
+              <p class="text-[16px] text-mute leading-body mb-6">{tier.desc}</p>
+
+              <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-3">What is included</p>
+              <ul class="space-y-2.5 mb-6">
+                {tier.includes.map((item) => (
+                  <li class="flex items-start gap-2.5 text-[15px] text-ink">
+                    <span class="mt-1 shrink-0 w-4 h-4 rounded-full bg-coral/10 flex items-center justify-center" aria-hidden="true">
+                      <svg width="8" height="7" viewBox="0 0 8 7" fill="none">
+                        <path d="M1 3.5L3 5.5L7 1" stroke="#FF6B57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div class="bg-paper rounded-xl p-4">
+                <p class="text-[13.5px] text-mute leading-[1.6] italic">{tier.note}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Pricing note -->
+  <section class="bg-paper py-20 px-6">
+    <div class="max-w-2xl mx-auto" data-reveal>
+      <h2 class="text-[24px] font-bold tracking-tight text-ink mb-4">A note on pricing</h2>
+      <div class="space-y-4 text-[16px] text-mute leading-body">
+        <p>All pricing reflects founder-led delivery. There is no junior consultant on these engagements. The range within each tier reflects scope variation, not tiered access to quality.</p>
+        <p>If you are not sure which tier fits your situation, the Leverage Audit is the natural starting point. It is designed to give you enough clarity to know whether a larger implementation engagement is the right next step. If it turns out AI infrastructure is not the right priority for your practice right now, you will leave with a better understanding of why, and a roadmap for when it is.</p>
+      </div>
+      <a
+        href={CAL_LINK}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex mt-8 items-center gap-2 bg-coral text-white rounded-full px-8 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150"
+      >
+        Start with a conversation
+      </a>
+    </div>
+  </section>
+</Layout>

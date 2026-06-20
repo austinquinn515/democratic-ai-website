@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignalWave from '../components/SignalWave.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+---
+
+<Layout
+  title="About"
+  description="Democratic AI Consulting is a founder-led practice built on one observation: AI tools are everywhere, but the human-first framework for using them is not. Austin Quinn, New York."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(700px 400px at 80% 20%, rgba(255,107,87,0.25), transparent 60%), radial-gradient(600px 400px at 10% 80%, rgba(45,91,255,0.25), transparent 60%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">About</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        The practice and the person behind it
+      </h1>
+    </div>
+  </section>
+
+  <!-- Founder + photo -->
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <!-- Photo -->
+        <div class="flex justify-center md:justify-start" data-reveal>
+          <div class="relative w-full max-w-sm">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-coral/20 to-brand-blue/20 translate-x-3 translate-y-3" aria-hidden="true"></div>
+            <img
+              src="/brand/austin-quinn.jpg"
+              alt="Austin Quinn, founder of Democratic AI Consulting"
+              class="relative rounded-2xl w-full object-cover shadow-[0_12px_40px_rgba(14,23,38,0.18)]"
+              width="420"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Intro text -->
+        <div data-reveal>
+          <h2 class="text-[28px] sm:text-[34px] font-bold tracking-tight text-ink mb-6 leading-tight">
+            Austin Quinn<br /><span class="text-mute font-normal text-[20px]">Founder, Democratic AI Consulting</span>
+          </h2>
+          <div class="space-y-4 text-[16px] text-mute leading-body">
+            <p>
+              Democratic AI Consulting exists because of a specific observation made during a very personal process: AI tools are everywhere, but the human-first framework for using them is not.
+            </p>
+            <p>
+              The path into this work started with building personal AI solutions, not as a developer or engineer, but as someone looking to do more with the hours available without compromising the quality or authenticity of the output. What that process made visible was something easy to miss from the outside.
+            </p>
+            <p>
+              Almost every resource, tool, and implementation framework in the AI space is designed to maximize what the technology can do. The human layer is treated as secondary: something to adapt around the capability rather than the thing the capability should be built to serve.
+            </p>
+            <p class="text-ink font-medium">
+              That observation is where this practice came from.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The founding -->
+  <section class="bg-paper py-24 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-[30px] font-bold tracking-tight text-ink mb-6" data-reveal>The Founding</h2>
+      <div class="space-y-5 text-[16px] text-mute leading-body" data-reveal>
+        <p>
+          The clients this practice is designed to serve are not slow adopters because they are behind the curve. They are cautious because they understand what is at stake. They have built careers inside trust-dependent relationships where a single communication that feels off-brand, impersonal, or hollow can unravel years of relationship equity.
+        </p>
+        <p>
+          They have watched peers automate their client communications and quietly noticed something hollow in the result. They are right to notice it.
+        </p>
+        <p>
+          The problem is that the AI consulting market has not caught up to that concern. The dominant model is efficiency consulting: find where time is being wasted, apply the relevant tool, show the ROI calculation. What it cannot do is account for the human psychology of professional trust. What happens when a voice that used to feel specific starts to sound like everyone else using the same tools.
+        </p>
+        <p>
+          Democratic AI Consulting was built specifically to address that gap. Professionals navigating this landscape deserve to do so with genuine peace of mind, knowing the solutions built for their practice reflect their own vision and philosophy within every detail, not a consultant's idea of what efficiency should look like.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="bg-white py-24 px-6 relative overflow-hidden">
+    <div class="absolute right-[-60px] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden lg:block" aria-hidden="true">
+      <SignalWave color="#2D5BFF" opacity={0.2} size={340} />
+    </div>
+    <div class="max-w-2xl mx-auto relative z-10">
+      <h2 class="text-[30px] font-bold tracking-tight text-ink mb-6" data-reveal>The Philosophy in Practice</h2>
+      <div class="space-y-5 text-[16px] text-mute leading-body" data-reveal>
+        <p>
+          There is a belief at the center of this work worth stating directly: outcomes are evidence of foundations, not goals in themselves. A consultant's value is not the deliverable. It is the judgment, the relationship, the specific way of thinking that produced the deliverable over time. AI built in service of that foundation compounds it. AI built to shortcut it erodes something that took years to develop.
+        </p>
+        <p>
+          This belief shapes every engagement. The goal is never to make a practice more efficient at the expense of what makes it worth choosing. The goal is to build AI infrastructure so well-suited to the specific professional using it that it feels like a natural extension of the way they already work, not a foreign system they are constantly adapting to.
+        </p>
+        <p>
+          The approach does not produce the most dramatic-sounding pitch. It produces the most durable results. And it attracts the kind of clients who are worth working with over a long time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live evidence -->
+  <section class="bg-paper py-20 px-6">
+    <div class="max-w-2xl mx-auto" data-reveal>
+      <h2 class="text-[24px] font-bold tracking-tight text-ink mb-4">A credential worth mentioning</h2>
+      <p class="text-[16px] text-mute leading-body mb-4">
+        Democratic AI Consulting is one of a small number of practices that can point to a live, functioning AI-powered operation as evidence that the methodology actually works. The Unspoken Ledger, an independently published newsletter, runs on exactly the kind of AI infrastructure this practice builds for clients. If you want to understand what voice-preserving AI content systems look like in practice, it is there to read.
+      </p>
+      <p class="text-[16px] text-mute leading-body">
+        That is not a claim. It is evidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-ink py-24 px-6">
+    <div class="max-w-xl mx-auto text-center" data-reveal>
+      <h2 class="text-[32px] font-bold tracking-tight text-white mb-5">
+        Ready to have a real conversation?
+      </h2>
+      <p class="text-[16px] text-[#c4cede] leading-body mb-8">
+        Capacity is intentionally limited. If you are ready to move, the first step is a 30-minute call.
+      </p>
+      <a
+        href={CAL_LINK}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 bg-coral text-white rounded-full px-9 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150"
+      >
+        Book a Leverage Audit
+      </a>
+    </div>
+  </section>
+</Layout>

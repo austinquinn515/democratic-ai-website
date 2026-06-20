@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+---
+
+<Layout
+  title="Insights"
+  description="Practical thinking on AI adoption for small business owners and independent practices. No hype, no techno-optimism. Just honest analysis."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(600px 400px at 85% 20%, rgba(45,91,255,0.30), transparent 60%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">Insights</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        Practical thinking on AI adoption
+      </h1>
+      <p class="text-[17px] text-[#c4cede] leading-body max-w-lg mx-auto">
+        No hype, no techno-optimism. Honest analysis of what AI can and cannot do for professionals who have something worth protecting.
+      </p>
+    </div>
+  </section>
+
+  <!-- Coming soon -->
+  <section class="bg-white py-32 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="w-16 h-16 rounded-full bg-paper flex items-center justify-center mx-auto mb-8" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 3V14L19 19" stroke="#5B6677" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="14" cy="14" r="11" stroke="#5B6677" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2 class="text-[26px] font-bold tracking-tight text-ink mb-4">Articles launching soon</h2>
+      <p class="text-[16px] text-mute leading-body max-w-md mx-auto mb-8">
+        The first pieces are in production. In the meantime, the best way to get a sense of how this practice thinks is to read the work it has already produced elsewhere.
+      </p>
+
+      <!-- Placeholder article cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left mt-12 mb-12">
+        {[
+          { tag: "Adoption", title: "Why AI adoption fails, and it is rarely a tool problem", eta: "Coming soon" },
+          { tag: "Voice", title: "What makes AI content sound like AI, and how to prevent it", eta: "Coming soon" },
+          { tag: "Strategy", title: "The audit-first model: why we start with diagnosis", eta: "Coming soon" },
+          { tag: "For practices", title: "AI for law practices: what works and what creates liability", eta: "Coming soon" },
+        ].map((post) => (
+          <div class="bg-paper rounded-xl p-6 opacity-60 cursor-default select-none">
+            <span class="inline-block text-[11px] font-semibold tracking-[0.08em] uppercase text-brand-blue bg-brand-blue/8 rounded-full px-3 py-1 mb-3">{post.tag}</span>
+            <h3 class="text-[16px] font-semibold text-ink leading-snug mb-3">{post.title}</h3>
+            <p class="text-[12px] font-medium text-mute">{post.eta}</p>
+          </div>
+        ))}
+      </div>
+
+      <a
+        href={CAL_LINK}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 bg-ink text-white rounded-full px-8 py-4 text-[15px] font-semibold hover:bg-[#1a2740] active:scale-95 transition-all duration-150"
+      >
+        Talk to Austin directly instead
+      </a>
+    </div>
+  </section>
+</Layout>

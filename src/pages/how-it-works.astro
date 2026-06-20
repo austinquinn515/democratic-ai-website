@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignalWave from '../components/SignalWave.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+
+const phases = [
+  {
+    num: "01",
+    title: "The Leverage Audit",
+    duration: "Two weeks",
+    price: "From $1,500",
+    color: "coral",
+    what: "A focused diagnostic engagement. We look at your current workflow, the tools you already use, how you communicate with clients, and where time is genuinely being lost versus where it just feels like it could be better.",
+    output: "A written priority roadmap: the three to five highest-leverage AI interventions for your specific practice, in plain language, with clear rationale and an honest assessment of what each would require from you to implement.",
+    youDo: "You share context about your practice, review the findings, and ask every question you have. The roadmap is yours to keep regardless of whether we work together further.",
+    weDo: "We do the diagnostic work, translate the landscape of AI tools into what is actually relevant to your practice, and produce a written output that gives you genuine clarity.",
+  },
+  {
+    num: "02",
+    title: "The Implementation Sprint",
+    duration: "Four to six weeks",
+    price: "$2,500 to $5,000",
+    color: "blue",
+    what: "The core engagement. We take the roadmap from the Audit and build the systems. Every piece is built from scratch around your specific workflow, your voice, your clients, and the way you already work.",
+    output: "A functioning AI infrastructure you can operate independently. This includes whatever combination of systems your practice needs: content production workflows, client communication templates and prompt architectures, administrative automation, or team adoption tooling.",
+    youDo: "You review deliverables at each stage and give feedback. The systems are built to the way you actually work, which means your input shapes every piece of it.",
+    weDo: "We handle the technical build, the testing, the refinement, and the documentation. You leave with something you can use, not something that requires a manual to operate.",
+  },
+  {
+    num: "03",
+    title: "Operations Retainer",
+    duration: "Month-to-month",
+    price: "$1,000 to $1,500 / mo",
+    color: "coral",
+    what: "For clients who have completed an implementation and want continued access to current judgment as their practice evolves and the AI landscape changes.",
+    output: "Monthly support hours, quarterly system reviews, and access to evaluation of new tools as they emerge. The retainer covers refinement work, adjustments as your workflow changes, and an ongoing strategic lens on what to adopt and what to ignore.",
+    youDo: "Bring questions, workflow changes, and anything that has shifted since the build. The retainer is as active or as quiet as your practice needs.",
+    weDo: "Stay current on the AI landscape, evaluate what is actually relevant to your practice, and keep your systems performing well as the tools evolve.",
+  },
+];
+---
+
+<Layout
+  title="How It Works"
+  description="A clear three-stage process for AI consulting: start with a Leverage Audit, build the systems that matter, and maintain them as your practice evolves."
+>
+  <!-- Page hero -->
+  <section
+    class="relative pt-44 pb-24 px-6 overflow-hidden"
+    style="background: radial-gradient(700px 400px at 90% 20%, rgba(45,91,255,0.4), transparent 60%), linear-gradient(150deg, #0a1020, #0E1726);"
+  >
+    <div class="absolute inset-0 opacity-[0.11] pointer-events-none" style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;" aria-hidden="true"></div>
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden lg:block" aria-hidden="true">
+      <SignalWave color="#6E8BFF" opacity={0.3} size={360} />
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">How it works</p>
+      <h1 class="text-[42px] sm:text-[54px] font-bold tracking-tightest leading-heading text-white mb-6">
+        A clear process, built around your practice
+      </h1>
+      <p class="text-[17px] text-[#c4cede] leading-body">
+        Three stages, each designed to stand on its own. Start with a Leverage Audit and decide from there.
+      </p>
+    </div>
+  </section>
+
+  <!-- Phases -->
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-3xl mx-auto space-y-20">
+      {phases.map((phase, i) => (
+        <div class="grid grid-cols-1 md:grid-cols-[80px_1fr] gap-6" data-reveal>
+          <!-- Step indicator -->
+          <div class="flex md:flex-col items-start gap-3">
+            <span class={`text-[13px] font-bold tracking-[0.1em] ${phase.color === 'coral' ? 'text-coral' : 'text-brand-blue'}`}>
+              {phase.num}
+            </span>
+            <div class={`hidden md:block w-px flex-1 mt-2 ${phase.color === 'coral' ? 'bg-coral/20' : 'bg-brand-blue/20'}`}></div>
+          </div>
+
+          <!-- Content -->
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-6">
+              <h2 class="text-[28px] sm:text-[32px] font-bold tracking-tight text-ink">{phase.title}</h2>
+              <div class="flex gap-2 flex-wrap">
+                <span class="text-[12px] font-semibold text-mute bg-paper rounded-full px-3 py-1">{phase.duration}</span>
+                <span class={`text-[12px] font-semibold rounded-full px-3 py-1 ${phase.color === 'coral' ? 'text-coral bg-coral/8' : 'text-brand-blue bg-brand-blue/8'}`}>{phase.price}</span>
+              </div>
+            </div>
+
+            <p class="text-[16px] text-mute leading-body mb-8">{phase.what}</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div class="bg-paper rounded-xl p-5">
+                <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-3">What you receive</p>
+                <p class="text-[14.5px] text-ink leading-[1.65]">{phase.output}</p>
+              </div>
+              <div class="bg-paper rounded-xl p-5">
+                <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-3">What we handle</p>
+                <p class="text-[14.5px] text-ink leading-[1.65]">{phase.weDo}</p>
+              </div>
+            </div>
+
+            <div class="bg-ink/4 rounded-xl p-5">
+              <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-mute mb-3">Your role</p>
+              <p class="text-[14.5px] text-ink leading-[1.65]">{phase.youDo}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- What to expect section -->
+  <section class="bg-paper py-24 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-[30px] font-bold tracking-tight text-ink mb-6" data-reveal>What to expect from the first conversation</h2>
+      <div class="space-y-4 text-[16px] text-mute leading-body" data-reveal>
+        <p>The first call is 30 minutes. No pitch. The conversation covers three things: what your practice looks like right now, where you think AI could genuinely help, and what you are most concerned about getting wrong.</p>
+        <p>From that conversation, the right starting point becomes fairly obvious. Most clients begin with a Leverage Audit. Some already have enough clarity and come in ready to build.</p>
+        <p class="text-ink font-medium">Capacity is intentionally limited. Every engagement involves the founder directly, which means there is a ceiling on active clients at any given time.</p>
+      </div>
+      <div class="mt-8" data-reveal>
+        <a
+          href={CAL_LINK}
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 bg-coral text-white rounded-full px-8 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150 shadow-[0_8px_24px_rgba(255,107,87,0.30)]"
+        >
+          Book a 30-minute call
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

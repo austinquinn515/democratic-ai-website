@@ -1,0 +1,520 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SignalWave from '../components/SignalWave.astro';
+
+const CAL_LINK = "https://cal.com/austinquinn/leverage-audit";
+
+const verticals = [
+  { name: "Attorneys", desc: "Build thought leadership, draft client communications, and free up billable time without producing work that reads like a press release." },
+  { name: "Accountants", desc: "Automate client follow-up, reporting prep, and routine correspondence while keeping the advisory relationship distinctly personal." },
+  { name: "Agencies", desc: "Scale content production across clients without scaling headcount, while keeping each brand's voice clear and distinctive." },
+  { name: "Clinics", desc: "Handle intake communications, follow-up sequences, and administrative workflows so your practitioners can focus on care." },
+  { name: "Consultants", desc: "Produce proposals, reports, and deliverables at a pace that lets you take on more work without compromising the quality clients hired you for." },
+  { name: "Coaches", desc: "Build systems for content, client onboarding, and follow-up so your voice and methodology scale beyond what you can personally write." },
+  { name: "Creators", desc: "Run a professional content operation without a staff, producing consistent output in your register without the grind of starting from scratch every week." },
+];
+
+const steps = [
+  {
+    num: "01",
+    title: "Start with a Leverage Audit",
+    body: "Two weeks. We map your current practice, identify where AI creates genuine leverage, and deliver a written roadmap. No generic recommendations. No reports that sit on a shelf.",
+    price: "From $1,500",
+  },
+  {
+    num: "02",
+    title: "We Build. You Approve.",
+    body: "Four to six weeks. Every system is built from scratch around your specific workflow, your voice, and your clients. You review and approve everything before it goes live.",
+    price: "$2,500 to $5,000",
+  },
+  {
+    num: "03",
+    title: "Your Practice, Amplified",
+    body: "Ongoing support as your work evolves and the AI landscape changes. Monthly refinements, quarterly reviews, and direct access to current judgment on what to adopt next.",
+    price: "From $1,000/mo",
+  },
+];
+
+const outcomes = [
+  "More capacity, without more complexity",
+  "AI content and communications that sound like you — not like everyone using the same tool",
+  "Infrastructure your team can actually operate",
+  "The ability to compete with operations ten times your size",
+  "Client relationships that stay personal even as you scale",
+  "A practice that compounds instead of just running",
+];
+
+const pricing = [
+  {
+    name: "AI Leverage Audit",
+    price: "From $1,500",
+    desc: "A two-week diagnostic engagement. You leave with a clear picture of where AI can genuinely help your practice and a written roadmap for getting there.",
+    ideal: "Start here if you want clarity before committing to implementation.",
+    featured: false,
+    cta: "Book an Audit",
+  },
+  {
+    name: "Implementation Sprint",
+    price: "$2,500 to $5,000",
+    desc: "Four to six weeks. A complete AI system built around your specific workflow, voice, and clients. You review everything before it goes live.",
+    ideal: "Right for practices ready to build and willing to do it properly.",
+    featured: true,
+    cta: "Start a Build",
+  },
+  {
+    name: "Operations Retainer",
+    price: "$1,000 to $1,500/mo",
+    desc: "Monthly support, system refinements, and access to current judgment as your practice evolves and new AI tools enter the market.",
+    ideal: "For clients who have completed an implementation and want ongoing leverage.",
+    featured: false,
+    cta: "Learn More",
+  },
+];
+
+const faqs = [
+  {
+    q: "How is this different from generic AI consulting?",
+    a: "Most AI consulting is optimization work: find where time is being wasted, apply a tool, show an ROI number. That framing treats efficiency as the goal. For professionals whose value lives inside the quality of a client relationship or the specificity of a voice, that is the wrong frame. Every engagement here starts from the human first. The infrastructure comes after.",
+  },
+  {
+    q: "Do I need technical knowledge to work with you?",
+    a: "No. The technical work is what this practice handles. What you bring is deep knowledge of your own practice: how you think, what your clients value, what makes your work recognizably yours. That is the harder and more important input.",
+  },
+  {
+    q: "How long does an engagement typically take?",
+    a: "The Leverage Audit is two weeks. Implementation engagements run four to six weeks. Retainers are month-to-month after that. The timeline is designed to produce something durable, not something fast that needs to be redone.",
+  },
+  {
+    q: "What industries and practice types do you work with?",
+    a: "Law practices, accounting and bookkeeping firms, agencies, clinics, independent consultants, coaches, and content creators. The common thread is that your competitive advantage lives in the quality of your thinking, your relationships, or your voice.",
+  },
+  {
+    q: "Will AI change how my clients experience working with me?",
+    a: "The goal is the opposite. AI built well should be invisible to the client. They experience the same quality of attention, the same voice, the same relationship. What changes is how much capacity you have to deliver it.",
+  },
+  {
+    q: "What is the first step?",
+    a: "Book a 30-minute call. It is a straightforward conversation: what your practice looks like right now, where you think AI could help, and what you are most concerned about getting wrong. From there, the right engagement type becomes clear.",
+  },
+];
+---
+
+<Layout title="Home">
+  <!-- ===================== HERO ===================== -->
+  <section
+    class="relative min-h-screen flex flex-col overflow-hidden"
+    style="background: radial-gradient(900px 500px at 82% 14%, rgba(45,91,255,0.52), transparent 60%), radial-gradient(640px 520px at 6% 94%, rgba(255,107,87,0.28), transparent 55%), linear-gradient(140deg, #080e1c, #0E1726 45%, #14203e);"
+    aria-label="Hero section"
+  >
+    <!-- Grain texture -->
+    <div
+      class="absolute inset-0 opacity-[0.12] pointer-events-none"
+      style="background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px); background-size: 22px 22px;"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Large background signal wave -->
+    <div class="absolute right-[-60px] top-[12%] opacity-20 pointer-events-none hidden lg:block" aria-hidden="true">
+      <SignalWave color="#6E8BFF" opacity={0.25} size={480} />
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pb-16 pt-40 text-center">
+      <span
+        class="inline-block text-[11px] font-semibold tracking-[0.18em] uppercase text-[#ffd7cf] border border-[rgba(255,150,135,0.35)] rounded-full px-4 py-1.5 mb-8 reveal"
+        data-reveal
+      >
+        Demystifying automation for growing businesses
+      </span>
+
+      <h1
+        class="font-bold text-white text-[42px] sm:text-[56px] lg:text-[68px] leading-[1.06] tracking-[-0.04em] max-w-3xl mb-7 reveal reveal-delay-1"
+        data-reveal
+      >
+        AI should enhance the human.<br />
+        <span class="text-coral">Not the other way around.</span>
+      </h1>
+
+      <p
+        class="text-[17px] sm:text-[19px] text-[#c4cede] max-w-[600px] leading-[1.65] mb-10 font-normal reveal reveal-delay-2"
+        data-reveal
+      >
+        We help small business owners and independent practices cut through the confusing world of AI, so technology expands your reach and impact while protecting the human touch that makes you, you.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 items-center reveal reveal-delay-3" data-reveal>
+        <a
+          href={CAL_LINK}
+          target="_blank"
+          rel="noopener"
+          class="bg-coral text-white rounded-full px-8 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink shadow-[0_8px_24px_rgba(255,107,87,0.35)]"
+        >
+          Book a Leverage Audit
+        </a>
+        <a
+          href="/how-it-works"
+          class="bg-white/10 text-white border border-white/25 rounded-full px-8 py-4 text-[16px] font-semibold hover:bg-white/16 active:scale-95 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-white"
+        >
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ICP STRIP ===================== -->
+  <section class="bg-white border-b border-paper py-8 px-6" aria-label="Who we serve">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-mute mb-5">
+        For small business owners and independent practices
+      </p>
+      <div class="flex flex-wrap gap-x-8 gap-y-3 justify-center">
+        {verticals.map((v) => (
+          <span class="text-[17px] font-semibold text-[#b4bfcc]">{v.name}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM ===================== -->
+  <section class="bg-paper py-24 px-6" aria-label="The problem worth naming">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5" data-reveal>The problem</p>
+      <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink mb-8" data-reveal>
+        The Problem Worth Naming
+      </h2>
+      <div class="space-y-5 text-[17px] text-mute leading-body" data-reveal>
+        <p>
+          Most AI consultants will tell you what tools to use. Fewer will tell you what you stand to lose if you use them carelessly.
+        </p>
+        <p>
+          The business owners and practitioners we serve have spent years building something genuinely hard to replicate: a specific way of working, a client relationship that took real trust to earn, a voice that clients and readers recognize as theirs and no one else's. They are not wrong to be cautious about AI adoption. The caution is intelligent. What is missing is not more enthusiasm about the technology. It is a consultant who takes the stakes seriously and builds accordingly.
+        </p>
+        <p class="text-ink font-medium">
+          That is the gap Democratic AI Consulting fills.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="bg-white py-24 px-6" aria-label="How it works">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4" data-reveal>How it works</p>
+        <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink" data-reveal>
+          A clear process, built around your practice
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {steps.map((step, i) => (
+          <div
+            class="group relative bg-paper rounded-2xl p-8 hover:shadow-[0_8px_32px_rgba(14,23,38,0.10)] transition-shadow duration-300"
+            data-reveal
+            style={`animation-delay: ${i * 0.12}s`}
+          >
+            <span class="block text-[13px] font-bold tracking-[0.1em] text-coral mb-4">{step.num}</span>
+            <h3 class="text-[20px] font-semibold text-ink mb-3 leading-snug tracking-tight">{step.title}</h3>
+            <p class="text-[15px] text-mute leading-body mb-5">{step.body}</p>
+            <span class="inline-block text-[13px] font-semibold text-brand-blue bg-brand-blue/8 rounded-full px-3 py-1">
+              {step.price}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10" data-reveal>
+        <a href="/how-it-works" class="text-[15px] font-semibold text-brand-blue hover:text-ink transition-colors duration-150">
+          Full process breakdown &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU GET ===================== -->
+  <section class="bg-paper py-24 px-6 relative overflow-hidden" aria-label="Outcomes">
+    <div class="absolute right-[-80px] bottom-[-40px] opacity-30 pointer-events-none hidden md:block" aria-hidden="true">
+      <SignalWave color="#2D5BFF" opacity={0.2} size={320} />
+    </div>
+
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-14">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4" data-reveal>Outcomes</p>
+        <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink" data-reveal>
+          What you actually get
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {outcomes.map((item, i) => (
+          <div
+            class="flex items-start gap-3 bg-white rounded-xl p-6 shadow-[0_2px_12px_rgba(14,23,38,0.06)]"
+            data-reveal
+            style={`animation-delay: ${i * 0.07}s`}
+          >
+            <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-coral/10 flex items-center justify-center" aria-hidden="true">
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4L3.5 6.5L9 1" stroke="#FF6B57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <p class="text-[15px] text-ink font-medium leading-snug">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO IT'S FOR ===================== -->
+  <section class="bg-white py-24 px-6" aria-label="Who we work with">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4" data-reveal>Who we serve</p>
+        <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink" data-reveal>
+          Built for professionals like you
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {verticals.map((v, i) => (
+          <div
+            class="border border-paper rounded-xl p-6 hover:border-coral/30 hover:shadow-[0_4px_20px_rgba(255,107,87,0.08)] transition-all duration-200"
+            data-reveal
+            style={`animation-delay: ${i * 0.07}s`}
+          >
+            <h3 class="text-[17px] font-semibold text-ink mb-2">{v.name}</h3>
+            <p class="text-[14px] text-mute leading-[1.65]">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10" data-reveal>
+        <a href="/who-its-for" class="text-[15px] font-semibold text-brand-blue hover:text-ink transition-colors duration-150">
+          See the full breakdown by practice type &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="bg-paper py-24 px-6" aria-label="Pricing">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-4">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4" data-reveal>Pricing</p>
+        <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink mb-4" data-reveal>
+          Clear pricing, no surprises
+        </h2>
+        <p class="text-[17px] text-mute max-w-lg mx-auto leading-body" data-reveal>
+          Every engagement is founder-led. No junior consultants, no templates. Every price point works directly with Austin.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        {pricing.map((tier, i) => (
+          <div
+            class={`relative rounded-2xl p-8 flex flex-col ${
+              tier.featured
+                ? 'bg-ink text-white shadow-[0_16px_48px_rgba(14,23,38,0.28)] ring-1 ring-coral/40'
+                : 'bg-white shadow-[0_2px_16px_rgba(14,23,38,0.07)]'
+            }`}
+            data-reveal
+            style={`animation-delay: ${i * 0.1}s`}
+          >
+            {tier.featured && (
+              <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-coral text-white text-[11px] font-semibold tracking-[0.08em] uppercase px-4 py-1 rounded-full">
+                Most requested
+              </span>
+            )}
+
+            <div class="mb-6">
+              <h3 class={`text-[18px] font-semibold mb-2 ${tier.featured ? 'text-white' : 'text-ink'}`}>
+                {tier.name}
+              </h3>
+              <p class={`text-[28px] font-bold tracking-tight ${tier.featured ? 'text-coral' : 'text-ink'}`}>
+                {tier.price}
+              </p>
+            </div>
+
+            <p class={`text-[14.5px] leading-[1.65] mb-4 flex-1 ${tier.featured ? 'text-[#c4cede]' : 'text-mute'}`}>
+              {tier.desc}
+            </p>
+
+            <p class={`text-[12.5px] italic mb-6 ${tier.featured ? 'text-[#8896a8]' : 'text-[#9ba6b5]'}`}>
+              {tier.ideal}
+            </p>
+
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener"
+              class={`text-center rounded-full px-6 py-3 text-[14.5px] font-semibold transition-all duration-150 active:scale-95 focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                tier.featured
+                  ? 'bg-coral text-white hover:bg-coral-lt focus-visible:ring-coral'
+                  : 'bg-ink text-white hover:bg-[#1a2740] focus-visible:ring-ink'
+              }`}
+            >
+              {tier.cta}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center text-[13px] text-mute mt-8" data-reveal>
+        Not sure which tier fits? <a href="/contact" class="text-brand-blue font-medium hover:underline">Start with a conversation.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FOUNDER NOTE ===================== -->
+  <section class="bg-white py-24 px-6" aria-label="About the founder">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Photo -->
+        <div class="flex justify-center md:justify-start" data-reveal>
+          <div class="relative">
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-coral/20 to-brand-blue/20 translate-x-3 translate-y-3" aria-hidden="true"></div>
+            <img
+              src="/brand/austin-quinn.jpg"
+              alt="Austin Quinn, founder of Democratic AI Consulting"
+              class="relative rounded-2xl w-full max-w-sm object-cover shadow-[0_12px_40px_rgba(14,23,38,0.18)]"
+              width="400"
+              height="480"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div data-reveal>
+          <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-5">From the founder</p>
+          <h2 class="text-[30px] sm:text-[36px] font-bold tracking-tightest leading-heading text-ink mb-6">
+            Every engagement involves me directly.
+          </h2>
+          <div class="space-y-4 text-[16px] text-mute leading-body">
+            <p>
+              Democratic AI Consulting is intentionally small. What that means for you: every system built under this roof reflects a genuine investment of attention, not a scaled delivery model.
+            </p>
+            <p>
+              I built this practice because I spent time solving exactly this problem for my own work and kept noticing a gap. The AI tools are there. The human-first framework for using them was not. The clients we serve have spent years building something genuinely hard to replicate. They deserve infrastructure that serves that investment, not shortcuts that quietly erode it.
+            </p>
+            <p class="text-ink font-medium">
+              If you have been quietly uneasy about AI adoption precisely because no one has presented a version of it that protects what you care about most, this is the right place.
+            </p>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a
+              href={CAL_LINK}
+              target="_blank"
+              rel="noopener"
+              class="text-center bg-coral text-white rounded-full px-7 py-3.5 text-[15px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150"
+            >
+              Book a Leverage Audit
+            </a>
+            <a
+              href="/about"
+              class="text-center text-ink border border-[#d1d9e6] rounded-full px-7 py-3.5 text-[15px] font-semibold hover:border-ink transition-all duration-150"
+            >
+              More about the practice
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="bg-paper py-24 px-6" aria-label="Frequently asked questions">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4" data-reveal>FAQ</p>
+        <h2 class="text-[36px] sm:text-[44px] font-bold tracking-tightest leading-heading text-ink" data-reveal>
+          Common questions
+        </h2>
+      </div>
+
+      <div class="space-y-3" id="faq-list">
+        {faqs.map((item, i) => (
+          <div class="bg-white rounded-xl overflow-hidden shadow-[0_2px_10px_rgba(14,23,38,0.05)]" data-reveal style={`animation-delay: ${i * 0.05}s`}>
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-[15.5px] text-ink hover:text-coral transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-coral"
+              aria-expanded="false"
+              data-faq-toggle
+            >
+              <span>{item.q}</span>
+              <span class="shrink-0 w-7 h-7 rounded-full bg-paper flex items-center justify-center transition-transform duration-200" data-faq-icon aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 1V11M1 6H11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+            <div class="hidden px-6 pb-5" data-faq-answer>
+              <p class="text-[15px] text-mute leading-body">{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOOKING CTA ===================== -->
+  <section
+    class="relative py-28 px-6 overflow-hidden"
+    style="background: radial-gradient(800px 500px at 100% 50%, rgba(45,91,255,0.35), transparent 60%), radial-gradient(600px 500px at 0% 50%, rgba(255,107,87,0.20), transparent 60%), #0E1726;"
+    aria-label="Book a call"
+  >
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none" aria-hidden="true">
+      <SignalWave color="#6E8BFF" opacity={0.3} size={400} />
+    </div>
+
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+      <h2 class="text-[36px] sm:text-[48px] font-bold tracking-tightest leading-heading text-white mb-6" data-reveal>
+        Ready to amplify your practice?
+      </h2>
+      <p class="text-[17px] text-[#c4cede] leading-body mb-10 max-w-xl mx-auto" data-reveal>
+        The Leverage Audit is a 30-minute call. No pitch. Just a clear look at where AI can genuinely help your practice and what that would look like to implement.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center" data-reveal>
+        <a
+          href={CAL_LINK}
+          target="_blank"
+          rel="noopener"
+          class="bg-coral text-white rounded-full px-9 py-4 text-[16px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150 shadow-[0_8px_28px_rgba(255,107,87,0.40)] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+        >
+          Book a Leverage Audit
+        </a>
+        <a
+          href="/services"
+          class="text-white border border-white/25 rounded-full px-9 py-4 text-[16px] font-semibold hover:bg-white/10 active:scale-95 transition-all duration-150 focus-visible:ring-2 focus-visible:ring-white"
+        >
+          See all services
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('[data-faq-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling as HTMLElement;
+      const icon = btn.querySelector('[data-faq-icon]') as HTMLElement;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Close all others
+      document.querySelectorAll('[data-faq-toggle]').forEach((other) => {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          const otherAnswer = other.nextElementSibling as HTMLElement;
+          const otherIcon = other.querySelector('[data-faq-icon]') as HTMLElement;
+          otherAnswer?.classList.add('hidden');
+          if (otherIcon) otherIcon.style.transform = '';
+        }
+      });
+
+      // Toggle current
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      answer?.classList.toggle('hidden', isOpen);
+      if (icon) icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+    });
+  });
+</script>

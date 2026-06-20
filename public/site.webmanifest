@@ -1,0 +1,22 @@
+{
+  "name": "Democratic AI Consulting",
+  "short_name": "Democratic AI",
+  "description": "Automation that amplifies your voice — not replaces it.",
+  "icons": [
+    {
+      "src": "/brand/favicons/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/brand/favicons/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0E1726",
+  "background_color": "#F4F6FA",
+  "display": "standalone",
+  "start_url": "/"
+}

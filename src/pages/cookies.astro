@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const updated = "June 2026";
+---
+
+<Layout
+  title="Cookie Notice"
+  description="Cookie notice for Democratic AI Consulting — this website uses minimal, privacy-respecting analytics."
+>
+  <section class="pt-44 pb-24 px-6 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-coral mb-4">Legal</p>
+      <h1 class="text-[36px] font-bold tracking-tight text-ink mb-3">Cookie Notice</h1>
+      <p class="text-[14px] text-mute mb-12">Last updated: {updated}</p>
+
+      <div class="space-y-8 text-[16px] text-mute leading-body">
+        <section>
+          <h2 class="text-[20px] font-semibold text-ink mb-3">The short version</h2>
+          <p>This website does not use cookies for tracking or advertising. We use Plausible Analytics, which is a cookie-free, privacy-first analytics tool.</p>
+        </section>
+
+        <section>
+          <h2 class="text-[20px] font-semibold text-ink mb-3">What is a cookie?</h2>
+          <p>A cookie is a small text file placed on your device by a website. Cookies are commonly used for session management, preferences, analytics, and advertising tracking.</p>
+        </section>
+
+        <section>
+          <h2 class="text-[20px] font-semibold text-ink mb-3">What we use</h2>
+          <div class="bg-paper rounded-xl p-6 space-y-4">
+            <div>
+              <p class="font-semibold text-ink mb-1">Plausible Analytics</p>
+              <p class="text-[14.5px]">We use Plausible Analytics to understand how visitors use this website. Plausible does not use cookies, does not collect personal data, and does not track users across websites. All data is aggregated and anonymized. <a href="https://plausible.io/data-policy" class="text-brand-blue hover:underline" target="_blank" rel="noopener">Read Plausible's data policy.</a></p>
+            </div>
+            <div>
+              <p class="font-semibold text-ink mb-1">Cal.com (booking)</p>
+              <p class="text-[14.5px]">When you use our booking calendar, you are interacting with Cal.com's platform, which may use cookies for session management. This only applies when you open the booking interface. <a href="https://cal.com/privacy" class="text-brand-blue hover:underline" target="_blank" rel="noopener">Read Cal.com's privacy policy.</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-[20px] font-semibold text-ink mb-3">Your choices</h2>
+          <p>Because this website does not use cookies for tracking, there is no cookie consent banner or tracking opt-out required. You may disable cookies entirely in your browser settings without affecting your experience on this site.</p>
+        </section>
+
+        <section>
+          <h2 class="text-[20px] font-semibold text-ink mb-3">Contact</h2>
+          <p>Democratic AI Consulting<br />Austin Quinn<br />New York, NY<br /><a href="mailto:austinquinn1999@gmail.com" class="text-brand-blue hover:underline">austinquinn1999@gmail.com</a></p>
+        </section>
+      </div>
+    </div>
+  </section>
+</Layout>

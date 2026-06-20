@@ -1,0 +1,94 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+  { href: '/services', label: 'Services' },
+  { href: '/who-its-for', label: "Who It's For" },
+  { href: '/how-it-works', label: 'How It Works' },
+  { href: '/about', label: 'About' },
+  { href: '/insights', label: 'Insights' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const legal = [
+  { href: '/privacy', label: 'Privacy Policy' },
+  { href: '/terms', label: 'Terms of Service' },
+  { href: '/cookies', label: 'Cookie Notice' },
+];
+---
+
+<footer class="bg-ink text-white" aria-label="Site footer">
+  <!-- Signal wave accent bar -->
+  <div class="h-0.5 bg-gradient-to-r from-coral via-brand-blue to-coral-lt opacity-60"></div>
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand column -->
+      <div class="md:col-span-1">
+        <a href="/" aria-label="Democratic AI Consulting — Home">
+          <img
+            src="/brand/logos/democratic-ai_horizontal_reversed.svg"
+            alt="Democratic AI Consulting"
+            class="h-7 w-auto mb-4"
+            width="140"
+            height="28"
+          />
+        </a>
+        <p class="text-[13px] text-[#8896a8] leading-relaxed max-w-xs">
+          Automation that amplifies your voice. We help small business owners and independent practices use AI to expand reach and impact while keeping the human touch.
+        </p>
+        <p class="mt-4 text-[13px] text-[#8896a8]">Austin Quinn &middot; New York, NY</p>
+      </div>
+
+      <!-- Navigation column -->
+      <div>
+        <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-[#5b6b7d] mb-4">Navigation</p>
+        <ul class="flex flex-col gap-2.5">
+          {links.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-[14px] text-[#8896a8] hover:text-white transition-colors duration-150"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- CTA column -->
+      <div>
+        <p class="text-[11px] font-semibold tracking-[0.12em] uppercase text-[#5b6b7d] mb-4">Start Here</p>
+        <p class="text-[14px] text-[#8896a8] leading-relaxed mb-5">
+          The Leverage Audit is a 30-minute call. No pitch. Just a clear look at where AI can genuinely help your practice.
+        </p>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-1.5 bg-coral text-white rounded-[30px] px-5 py-2.5 text-[14px] font-semibold hover:bg-coral-lt active:scale-95 transition-all duration-150"
+        >
+          Book a Leverage Audit <span class="text-white/80 text-lg leading-none">&rsaquo;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-[12px] text-[#5b6b7d]">
+        &copy; {year} Democratic AI Consulting. All rights reserved.
+      </p>
+      <ul class="flex flex-wrap gap-5">
+        {legal.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-[12px] text-[#5b6b7d] hover:text-[#8896a8] transition-colors duration-150"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</footer>
